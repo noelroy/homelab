@@ -1,0 +1,17 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- General:
+    - Speedtest Tracker:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/speedtest-tracker.png
+        href: "http://192.168.0.110:8080"
+        description: Test internet speed
+        server: my-docker
+        container: speedtest-tracker
+    - Memos:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/memos.svg
+        href: "http://192.168.0.110:5230"
+        description: Simple note taking app
+        server: my-docker
+        container: memos
