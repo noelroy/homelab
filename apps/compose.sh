@@ -1,6 +1,9 @@
 #!/bin/sh
 set -eu
 
+# Folders to skip - space separated list of folder names
+EXCLUDE=""
+
 ACTION="${1:-up}"
 ROOT_DIR="${2:-$(cd "$(dirname "$0")" && pwd)}"
 
@@ -11,10 +14,13 @@ case "$ACTION" in
   *) echo "Usage: $0 {up|down|stop} [dir]" >&2; exit 1 ;;
 esac
 
-failed=""
 for dir in "$ROOT_DIR"/*/; do
   [ -d "$dir" ] || continue
-  (cd "$dir" && run) || failed="$failed $(basename "$dir")"
-done
+  name="$(basename "$dir")"
 
-[ -n "$failed" ] && { echo "Failed:$failed" >&2; exit 1; }
+  case " $EXCLUDE " in
+    *" $name "*) continue ;;
+  esac
+
+  (cd "$dir" && run) || echo "failed: $name" >&2
+done
