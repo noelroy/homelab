@@ -15,3 +15,9 @@
         description: Simple note taking app
         server: my-docker
         container: memos
+    - Portainer:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer.svg
+        href: "https://192.168.0.110:9443"
+        description: Docker management tool
+        server: my-docker
+        container: portainer
