@@ -2,22 +2,52 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- General:
+- Infrastructure:
+    - Pi hole:
+        icon: pi-hole
+        href: https://pi-hole.homelab.local
+        description: DNS Server
+    - Adguard Home:
+        icon: adguard-home
+        href: https://adguard.homelab.local
+        description: DNS Filter
+    - Uptime Kuma:
+        icon: uptime-kuma
+        href: https://uptime-kuma.homelab.local
+        description: Monitoring Dashboard
+    - Dozzle:
+        icon: dozzle
+        href: https://dozzle.homelab.local
+        description: Docker Logs Dashboard
+
+- Apps:
     - Speedtest Tracker:
-        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/speedtest-tracker.png
-        href: "http://192.168.0.110:8080"
+        icon: speedtest-tracker
+        href: "http://192.168.0.110:8082"
         description: Test internet speed
         server: my-docker
         container: speedtest-tracker
     - Memos:
-        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/memos.svg
+        icon: memos
         href: "http://192.168.0.110:5230"
         description: Simple note taking app
         server: my-docker
         container: memos
     - Portainer:
-        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer.svg
+        icon: portainer
         href: "https://192.168.0.110:9443"
         description: Docker management tool
         server: my-docker
         container: portainer
+    - Jellyfin:
+        icon: jellyfin
+        href: "http://192.168.0.110:8096"
+        description: Media server
+        server: my-docker
+        container: jellyfin
+    - Immich:
+        icon: immich
+        href: "https://192.168.0.110:2283"
+        description: Immich server
+        server: my-docker
+        container: immich_server

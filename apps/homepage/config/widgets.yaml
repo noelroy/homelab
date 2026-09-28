@@ -5,7 +5,11 @@
 - resources:
     cpu: true
     memory: true
-    cputemp: true
+    # cputemp: true
     disk:
       - /
       # - /mnt/media
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
