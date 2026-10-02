@@ -15,39 +15,47 @@
         icon: uptime-kuma
         href: https://uptime-kuma.homelab.local
         description: Monitoring Dashboard
+- Docker:
     - Dozzle:
         icon: dozzle
         href: https://dozzle.homelab.local
         description: Docker Logs Dashboard
-
-- Apps:
-    - Speedtest Tracker:
-        icon: speedtest-tracker
-        href: "http://192.168.0.110:8082"
-        description: Test internet speed
-        server: my-docker
-        container: speedtest-tracker
-    - Memos:
-        icon: memos
-        href: "http://192.168.0.110:5230"
-        description: Simple note taking app
-        server: my-docker
-        container: memos
+        container: dozzle
     - Portainer:
         icon: portainer
         href: "https://192.168.0.110:9443"
         description: Docker management tool
         server: my-docker
         container: portainer
+
+- Apps:
+    - Speedtest Tracker:
+        icon: speedtest-tracker
+        href: https://speedtest-tracker.homelab.local
+        description: Test internet speed
+        server: my-docker
+        container: speedtest-tracker
+    - Memos:
+        icon: memos
+        href: https://memos.homelab.local
+        description: Simple note taking app
+        server: my-docker
+        container: memos
     - Jellyfin:
         icon: jellyfin
-        href: "http://192.168.0.110:8096"
+        href: https://jellyfin.homelab.local
         description: Media server
         server: my-docker
         container: jellyfin
     - Immich:
         icon: immich
-        href: "https://192.168.0.110:2283"
+        href: https://immich.homelab.local
         description: Immich server
         server: my-docker
         container: immich_server
+    - Navidrome:
+        icon: navidrome
+        href: https://navidrome.homelab.local
+        description: Navidrome server
+        server: my-docker
+        container: navidrome
