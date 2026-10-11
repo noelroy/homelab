@@ -22,7 +22,7 @@
         description: Docker Logs Dashboard
         container: dozzle
     - Portainer:
-        icon: portainer
+        icon: portainer-dark
         href: "https://192.168.0.110:9443"
         description: Docker management tool
         server: my-docker

@@ -3,12 +3,22 @@
 # https://gethomepage.dev/configs/settings/
 
 title: Homelab
+cardBlur: lg # sm, md or lg
+headerStyle: underlined #underlined # or boxed, boxedWidgets, clean
+
 background:
   image: https://images.unsplash.com/photo-1533563906091-fdfdffc3e3c4?q=80&w=1170&auto=format&fit=crop
-  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
-  saturate: 60 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
-  brightness: 60 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
-  opacity: 100 # 0-100
+  # blur: "" # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  # saturate: 100 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  # brightness: 100 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 80 # 0-100
+
+theme: dark
+color: slate
+hideVersion: true
+statusStyle: 'dot'
+iconStyle: theme
+
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey

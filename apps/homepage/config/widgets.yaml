@@ -3,14 +3,17 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - resources:
+    expanded: true
     cpu: true
     memory: true
     # cputemp: true
     disk:
       - /
       - /mnt/media
+    label: Debian
+
 - datetime:
-    text_size: xl
+    text_size: md
     format:
       timeStyle: short
       dateStyle: medium
